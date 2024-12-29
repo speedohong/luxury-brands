@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONTHEGO MM - LOUIS VUITTON</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="nav-left">
+                <button class="menu-btn">Menu</button>
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="logo">
+                <a href="/">LOUIS VUITTON</a>
+            </div>
+            <div class="nav-right">
+                <button class="call-btn">Call Us</button>
+                <button class="wishlist-btn">Wishlist</button>
+                <button class="account-btn">Account</button>
+                <button class="cart-btn">Cart</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-detail">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-mm-monogram-empreinte-leather-handbags--M46119_PM2_Front%20view.png" alt="ONTHEGO MM">
+            </div>
+            <div class="thumbnail-list">
+                <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-mm-monogram-empreinte-leather-handbags--M46119_PM1_Side%20view.png" alt="View 1" class="active">
+                <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-mm-monogram-empreinte-leather-handbags--M46119_PM2_Front%20view.png" alt="View 2">
+                <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-mm-monogram-empreinte-leather-handbags--M46119_PM3_Back%20view.png" alt="View 3">
+                <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-mm-monogram-empreinte-leather-handbags--M46119_PM4_Interior%20view.png" alt="View 4">
+            </div>
+        </div>
+        
+        <div class="product-info">
+            <h1>ONTHEGO MM</h1>
+            <p class="price">$3,950</p>
+            <p class="description">
+                The OnTheGo MM tote bag in supple Monogram Empreinte leather combines 
+                timeless elegance with everyday practicality. Its generous capacity makes 
+                it perfect for work or weekend use.
+            </p>
+            
+            <div class="product-details">
+                <h2>Product Details</h2>
+                <ul>
+                    <li>13.0 x 11.2 x 5.9 inches</li>
+                    <li>Monogram Empreinte leather</li>
+                    <li>Cowhide-leather trim</li>
+                    <li>Textile lining</li>
+                    <li>Gold-color hardware</li>
+                </ul>
+            </div>
+
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-wishlist">Add to Wishlist</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- 复制首页的footer内容 -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 图片切换功能
+        const mainImage = document.querySelector('.main-image img');
+        const thumbnails = document.querySelectorAll('.thumbnail-list img');
+
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                // 更新主图
+                mainImage.src = thumb.src;
+                // 更新激活状态
+                thumbnails.forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html> 
